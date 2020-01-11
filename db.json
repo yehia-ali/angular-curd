@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "first_name": "Emmayehia",
+      "last_name": "Wong",
+      "email": "emma.wong@reqres.in",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "email": "eve.holt@reqres.in",
+      "first_name": "Eve",
+      "last_name": "Holt",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"
+    },
+    {
+      "first_name": "yehia",
+      "last_name": "alusss",
+      "email": "yehiaali@gmail.com",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg",
+      "id": 5
+    }
+  ]
+}

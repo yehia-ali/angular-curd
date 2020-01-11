@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-3" *ngFor="let user of users; let i = index;">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" [src]="user.avatar" alt="{{user.first_name}}">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">{{user.first_name}} {{user.last_name}}</h3>
+                        <h4 class="title"> {{user.email}}</h4>
+                    </div>
+                    <ul class="action">
+                        <li>
+                            <a type="button"  [routerLink]="['/user/edit/', user.id]" class="btn btn-outline-success">Edit</a>
+                        </li>
+                        <li>
+                            
+                            <button type="button" (click)="deleteUser(user.id, i)"   class="btn btn-outline-danger">remove</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
