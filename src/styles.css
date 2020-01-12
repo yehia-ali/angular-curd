@@ -7,6 +7,76 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
+a:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
 .modal-content {
     border-radius: 40px;
 }
+/* style form login and register */
+.form-card {
+    padding: 40px;
+    background: #fff;
+    margin: 60px 0;
+  }
+  
+  .form-card img {
+    width: 140px;
+    border-radius: 50%;
+  }
+  .form-card a {
+      color: rgba(0,0,0, 0.5);
+  }
+  .form-card .btn {
+      color: #fff;
+      background: linear-gradient(to right, #273eb0, #40fbea);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-size: 13px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+      transition: all 0.5s ease;
+  }
+  .form-card h2.text-with-line {
+      white-space: nowrap;
+      display: table;
+      position:relative;
+      left:50%;
+      font-size: 16px;
+      line-height: 2;
+      transform:translateX(-50%);
+      overflow:hidden;
+  }
+  .form-card h2.text-with-line::before{
+      border-top: 2px solid rgba(0, 0, 0, 0.4);
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 1em;
+      width: 33%;
+      right:1%;
+  }
+  .form-card h2.text-with-line::after {
+      border-top: 2px solid rgba(0, 0, 0, 0.4);
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 1em;
+      width: 33%;
+      left:1%;
+  }
+  .form-card i.fa {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #2a59b8;
+    padding: 5px;
+    border: 1px solid #2a59b8;
+    border-radius: 50%;
+  }
+  .form-card .form-control {
+    padding-left: 35px;
+  }
