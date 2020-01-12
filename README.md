@@ -1,10 +1,15 @@
-# Task
+# Angular curd and login
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## JSON Server
+
+Run `json-server --watch db.json` for watch  json file db,json
+link json-server `https://www.npmjs.com/package/json-server` 
 
 ## Code scaffolding
 
