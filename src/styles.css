@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    overflow-x: hidden;
+    background-image: url(https://picsum.photos/g/3000/2000);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.modal-content {
+    border-radius: 40px;
+}

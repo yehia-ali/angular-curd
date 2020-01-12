@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content py-4">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-3" *ngFor="let user of users; let i = index;">
@@ -12,11 +12,11 @@
                     </div>
                     <ul class="action">
                         <li>
-                            <a type="button"  [routerLink]="['/user/edit/', user.id]" class="btn btn-outline-success">Edit</a>
+                            <a type="button"  [routerLink]="['/user/edit/', user.id]" class="btn btn-outline-success border-0">Edit</a>
                         </li>
                         <li>
                             
-                            <button type="button" (click)="deleteUser(user.id, i)"   class="btn btn-outline-danger">remove</button>
+                            <button type="button" (click)="deleteUser(user.id, i)"   class="btn btn-outline-danger border-0">remove</button>
                         </li>
                     </ul>
                 </div>

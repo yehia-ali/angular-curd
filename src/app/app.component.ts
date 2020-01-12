@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { UsersService } from '../app/users/users.service';
-import { Router } from "@angular/router";
+import { UsersService } from './shared/services';
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -12,31 +12,16 @@ import { Router } from "@angular/router";
 export class AppComponent implements OnInit {
   closeResult: string;
   UserForm: FormGroup;
+  returnUrl: string;
 
   constructor(
     private modalService: NgbModal,
     private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
     private router: Router,
     private usersService: UsersService
   ) { }
-  open(content) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
-  }
-
+  
   ngOnInit() {
     this.UserForm = this.formBuilder.group({
       first_name: ['', Validators.compose([Validators.required])],
@@ -60,6 +45,23 @@ export class AppComponent implements OnInit {
       }, (err) => {
         console.log(err);
       });
+    }
+  open(content) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
   }
-
+  
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
+  
 }

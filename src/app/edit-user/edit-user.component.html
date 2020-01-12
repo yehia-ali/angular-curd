@@ -1,30 +1,32 @@
-<div class="row mt-5">
-  <div class="col-md-6 mx-auto">
-      <h2 class="text-center">Update User</h2>
+<div class="container-fluid">
+  <div class="row mt-5 justify-content-center">
+    <div class="col-md-5 col-11">
       <div class="card mt-3">
-          <div class="card-body">
-            <form [formGroup]="UserForm" (ngSubmit)="updateUser(UserForm.value)">
-              <div class="form-group">
-                <label class="col-md-4">first name </label>
-                <input type="text" class="form-control" formControlName='first_name' />
-              </div>
-              <div class="form-group">
-                <label class="col-md-4">last name </label>
-                <input type="text" class="form-control" formControlName='last_name' />
-              </div>
-              <div class="form-group">
-                <label class="col-md-4">email </label>
-                <input type="email" class="form-control" formControlName='email' />
-              </div>
-              <div class="form-group">
-                <label class="col-md-4">user image Url </label>
-                <input type="url" class="form-control" formControlName='avatar' />
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary col-md-4" [disabled]="UserForm.invalid">Update</button>
-              </div>
-            </form>
-          </div>
-      </div>
+        <h2 class="text-center pt-3">Edit User</h2>
+            <div class="card-body">
+              <form [formGroup]="UserForm" (ngSubmit)="updateUser(UserForm.value)">
+                <div class="form-group">
+                  <label>first name </label>
+                  <input type="text" class="form-control" formControlName='first_name' />
+                </div>
+                <div class="form-group">
+                  <label>last name </label>
+                  <input type="text" class="form-control" formControlName='last_name' />
+                </div>
+                <div class="form-group">
+                  <label>email </label>
+                  <input type="email" class="form-control" formControlName='email' />
+                </div>
+                <div class="form-group">
+                  <label>user image Url </label>
+                  <input type="url" class="form-control" formControlName='avatar' />
+                </div>
+                <div class="form-group text-center">
+                  <button type="submit" class="btn btn-outline-primary border-0" [disabled]="UserForm.invalid">Update</button>
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
   </div>
 </div>
