@@ -50,7 +50,6 @@ export class AuthService {
     return localStorage.getItem('access_token') != null;
   }
   logout() {
-    localStorage.clear();
     this.router.navigate(['/login']);
   }
   getData(data): Observable<LoginResponse> {
