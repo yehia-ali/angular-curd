@@ -53,9 +53,9 @@ export class AuthService {
     localStorage.clear();
     this.router.navigate(['/login']);
   }
-  getData(data): Observable<LoginResponse[]> {
+  getData(data): Observable<LoginResponse> {
     return this.http
-      .post<LoginResponse[]>(this.basePath, data, this.httpOptions)
+      .post<LoginResponse>(this.basePath, data, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
