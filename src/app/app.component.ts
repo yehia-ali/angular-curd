@@ -3,6 +3,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { UsersService } from './shared/services';
 import { Router, ActivatedRoute } from "@angular/router";
+import { AuthService } from './shared/services';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,9 @@ import { Router, ActivatedRoute } from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  model: any = {};
+  dataFromServer: any = [];
+
   closeResult: string;
   UserForm: FormGroup;
   returnUrl: string;
@@ -19,7 +23,8 @@ export class AppComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private usersService: UsersService
+    private usersService: UsersService,
+    private authService: AuthService
   ) { }
   
   ngOnInit() {
@@ -29,7 +34,26 @@ export class AppComponent implements OnInit {
       email: ['', Validators.compose([Validators.required])],
       avatar: ['', Validators.compose([Validators.required])],
     });
+
+    // 
+    this.getSomePrivateStuff();
   }
+  getSomePrivateStuff() {
+    this.model.action = 'stuff';
+    this.authService.getData(this.model).subscribe(response => {
+       if (response.status === 'success') {
+        this.dataFromServer = response['data']['Coords'];
+       }
+    }, error => {
+      this.authService.logout();
+    });
+  }
+
+  logout(){
+    this.authService.logout();
+  }
+
+
   addUser() {
     const payload = {
       first_name: this.UserForm.controls.first_name.value,

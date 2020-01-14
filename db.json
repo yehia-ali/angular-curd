@@ -5,21 +5,24 @@
       "email": "george.bluth@reqres.in",
       "first_name": "George",
       "last_name": "Bluth",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg",
+      "password": "123456789"
     },
     {
       "id": 2,
       "email": "janet.weaver@reqres.in",
       "first_name": "Janet",
       "last_name": "Weaver",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg",
+      "password": "123456789"
     },
     {
       "first_name": "Emm",
       "last_name": "Wong",
       "email": "emma.wong@reqres.in",
       "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg",
-      "id": 3
+      "id": 3,
+      "password": "123456789"
     },
     {
       "first_name": "Eveee",
@@ -83,6 +86,74 @@
       "first_name": "Rachel",
       "last_name": "Howell",
       "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"
+    },
+    {
+      "action": "stuff",
+      "id": 13
+    },
+    {
+      "action": "stuff",
+      "id": 14
+    },
+    {
+      "action": "stuff",
+      "id": 15
+    },
+    {
+      "action": "stuff",
+      "id": 16
+    },
+    {
+      "action": "stuff",
+      "id": 17
+    },
+    {
+      "action": "stuff",
+      "id": 18
+    },
+    {
+      "action": "stuff",
+      "id": 19
+    },
+    {
+      "action": "stuff",
+      "id": 20
+    },
+    {
+      "action": "stuff",
+      "id": 21
+    },
+    {
+      "action": "stuff",
+      "id": 22
+    },
+    {
+      "action": "stuff",
+      "id": 23
+    },
+    {
+      "action": "stuff",
+      "id": 24
+    },
+    {
+      "action": "stuff",
+      "id": 25
+    },
+    {
+      "action": "stuff",
+      "id": 26
+    },
+    {
+      "action": "stuff",
+      "id": 27
+    },
+    {
+      "action": "stuff",
+      "id": 28
+    },
+    {
+      "action": "stuff",
+      "id": 29
     }
   ]
 }

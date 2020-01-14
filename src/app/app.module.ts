@@ -12,13 +12,13 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
     AppComponent, 
     UsersComponent,
     EditUserComponent,
-    // AddUserComponent,
     NotfoundedComponent,
     LoginComponent,
     HomeComponent,
@@ -30,7 +30,16 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => {
+          return localStorage.getItem('access_token');
+        },
+        whitelistedDomains: ['localhost'],
+        blacklistedRoutes: ['localhost/home']
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
